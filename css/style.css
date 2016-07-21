@@ -1,7 +1,12 @@
 .newQuoteImg{
 	width:100px;
 	height:100px;
-} 
+}  
+
+#street-view {
+        height: 150px;
+        width: 150px;
+      }
 
 
 label.btn span {

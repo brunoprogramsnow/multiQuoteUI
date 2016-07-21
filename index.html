@@ -15,7 +15,8 @@
 
 	
 </head>
-<body>
+<body> 
+
 
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Copy Quote Horizontal
@@ -46,7 +47,7 @@
 
       	<ul class="list-group col-md-4">
       		<li class="list-group-item"><strong>Named Insured   :</strong> Test</li>
-      		<li class="list-group-item"><strong>Property Address:</strong> 2926 Leon Rd Jacksonville, FL 32246</li>
+      		<li class="list-group-item"><strong>Property Address:</strong> 2926 Leon Rd Jacksonville, FL 32246<div id="street-view"></div></li>
       		<li class="list-group-item"><strong>Carrier    :</strong> <img class='newQuoteImg'src="img/federated.png"></li> 
       		<li class="list-group-item"><strong>Product         :</strong> HO3 FL</li> 
       		<li class="list-group-item"><strong>Deductible         :</strong> $555</li>
@@ -260,5 +261,20 @@
 
 
 </body> 
+ <script>
+      var panorama;
+      function initialize() {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('street-view'),
+            {
+              position: {lat: 37.869260, lng: -122.254811},
+              pov: {heading: 165, pitch: 0},
+              zoom: 1
+            });
+      }
+    </script> 
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=&callback=initialize">
+    </script>
 
 </html>
